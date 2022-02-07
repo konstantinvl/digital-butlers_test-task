@@ -1,0 +1,117 @@
+.navigation {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  * {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__left {
+    &__logo {
+      margin-left: 80px;
+    }
+  }
+  &__right {
+    & > * {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__phone {
+      margin-left: 140px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      &__top-text {
+        display: flex;
+        opacity: 0.5;
+        justify-content: flex-end;
+        align-items: center;
+        & > .textProxima {
+          margin-left: 7px;
+          font-size: 12px;
+          line-height: 12px;
+          text-align: right;
+          letter-spacing: -0.5px;
+        }
+      }
+      & > .textProxima {
+        margin-top: 7px;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: right;
+      }
+    }
+    &__mail {
+      & > .textProxima {
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: -0.5px;
+        opacity: 0.5;
+      }
+      &-btn {
+        display: flex;
+        text-decoration: none;
+        margin-top: 6px;
+        align-items: center;
+        & .textProxima {
+          margin-left: 9.5px;
+          font-size: 14px;
+          line-height: 12px;
+          text-align: right;
+          letter-spacing: -0.5px;
+          color: #fee040;
+        }
+      }
+    }
+  }
+
+  &__menu-icon {
+    width: 40px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s;
+    &__whiteline {
+      width: 100%;
+
+      height: 2px;
+      background: #ffffff;
+    }
+    &__yellow {
+      height: 2px;
+      width: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      &line {
+        margin: 0;
+        min-height: 2px;
+        width: 33%;
+        background: #fee040;
+      }
+    }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1450px) {
+  .navigation__right__phone {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .navigation__right {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.services-slider {
+  display: flex;
+  margin-top: 50px;
+}
+.services-slider-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.services-slider-status {
+  margin: 60px 0px 80px;
+  transition: all 0.3s;
+  height: 4px;
+  background: linear-gradient(270deg, #fee040 0%, rgba(254, 224, 64, 0) 100%);
+}

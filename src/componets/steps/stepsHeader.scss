@@ -1,0 +1,25 @@
+.steps-header {
+  margin: 105px 0px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > .textBebas {
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(180deg, #60b6ff 0%, rgba(0, 78, 134, 0.8) 100%);
+
+    font-size: 80px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+  & > .textGilroy {
+    width: 36%;
+    margin-top: 36px;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #505050;
+  }
+}

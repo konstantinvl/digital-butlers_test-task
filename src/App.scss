@@ -1,0 +1,100 @@
+.app {
+  display: flex;
+  width: 100%;
+  max-height: 100vh;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  & > * {
+    width: 100%;
+    padding: 0px calc(50% - 710px);
+  }
+}
+
+.hero {
+  background-image: url(./assets/images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: center;
+}
+
+.button {
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    box-shadow: white 1px 2px 15px;
+    transition: all 0.3s;
+    & > * {
+      transition: all 0.3s;
+      transform: scale(1.2);
+    }
+  }
+  &.hero-btn {
+    width: 100%;
+    min-height: 70px;
+  }
+  &.yellow {
+    background: #fee040;
+  }
+}
+
+.whywe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #ffffff 50%, #f5f5f5 50%);
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+
+.services {
+  padding: 0;
+  background-image: url(./assets/images/service-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  background-color: #ffffff;
+  min-height: 900px;
+  padding: 0;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1700px) {
+  .app {
+    & > * {
+      padding: 0px 10%;
+    }
+  }
+  .whywe {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .steps {
+    padding: 0;
+  }
+
+  .services {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1000px) {
+  .whywe {
+    flex-direction: column;
+    background: linear-gradient(180deg, #ffffff 50%, #f5f5f5 50%);
+  }
+}

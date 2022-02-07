@@ -1,0 +1,26 @@
+.services-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  & > .textBebas {
+    font-size: 20px;
+    line-height: 16px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: #fee040;
+  }
+  & > .textGilroy {
+    margin-top: 20px;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -0.5px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1700px) {
+  .services-header {
+    padding: 0px 10%;
+  }
+}

@@ -1,0 +1,63 @@
+.services-point {
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+  justify-content: space-between;
+
+  &:first-of-type {
+    margin-left: calc(50% - 710px);
+  }
+  &:last-of-type {
+    margin-right: calc(50% - 710px);
+  }
+
+  & > * {
+    width: 100%;
+  }
+  &__info-wrapper {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    & > .service-title {
+      margin-top: 20px;
+    }
+    & > .service-info {
+      margin-top: 20px;
+    }
+  }
+  &__photo {
+    height: 190px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+  }
+  &__more {
+    text-decoration: none;
+    & > .textBebas {
+      font-size: 20px;
+      line-height: 16px;
+      letter-spacing: 7px;
+      color: #fee040;
+      margin-right: 13px;
+    }
+  }
+  & ~ .services-point {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1700px) {
+  .services-point {
+    min-width: 350px;
+    &:first-of-type {
+      margin-left: 10%;
+    }
+    &:last-of-type {
+      margin-right: 10%;
+    }
+    &__info-wrapper {
+      min-width: 350px;
+    }
+  }
+}

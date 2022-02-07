@@ -1,0 +1,19 @@
+.whywe-content {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  & > .textProxima {
+    margin-top: 50px;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.5px;
+    color: #707070;
+    opacity: 0.7;
+  }
+  & > .textGilroy {
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -0.5px;
+    color: #151515;
+  }
+}

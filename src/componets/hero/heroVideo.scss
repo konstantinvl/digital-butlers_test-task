@@ -1,0 +1,111 @@
+.hero-video {
+  margin-top: 63px;
+  margin-bottom: 60px;
+  width: 100%;
+  min-height: 228px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  & > * {
+    display: flex;
+  }
+  &__left {
+    min-height: 228px;
+    align-items: flex-end;
+  }
+  &__video {
+    min-height: 220px;
+    width: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @-webkit-keyframes rotating /* Safari and Chrome */ {
+      from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes rotating {
+      from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    & .hero-video__video__stamp {
+      -webkit-animation: rotating 20s linear infinite;
+      -moz-animation: rotating 20s linear infinite;
+      -ms-animation: rotating 20s linear infinite;
+      -o-animation: rotating 20s linear infinite;
+      animation: rotating 20s linear infinite;
+    }
+
+    & > * {
+      position: absolute;
+      transition: all 0.3s;
+    }
+    &:hover {
+      & .hero-video__video__photo {
+        transform: scale(1.2);
+      }
+      & .hero-video__video__play {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__feature {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    & ~ .hero-video__feature {
+      margin-left: 100px;
+    }
+    & > .textProxima {
+      margin-left: 28px;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1450px) {
+  .hero-video {
+    flex-direction: column-reverse;
+    align-items: center;
+    min-height: 440px;
+    &__left {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
+    }
+    &__video {
+      margin-top: 10px;
+    }
+    &__feature {
+      margin: 10px;
+      & ~ .hero-video__feature {
+        margin-left: unset;
+      }
+    }
+  }
+}
